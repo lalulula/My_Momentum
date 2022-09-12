@@ -9,17 +9,20 @@ const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 const savedUserName = localStorage.getItem(USERNAME_KEY);
 
+const toDo = document.getElementById("todo-form");
+
 
 if(savedUserName === null){
    loginForm.classList.remove(HIDDEN_CLASSNAME);
    loginForm.addEventListener('submit',onLoginSubmit);
 }else{
+   toDo.classList.remove("hidden");
    paintGreetings(savedUserName)
 }
 
 function paintGreetings(username){
    greeting.classList.remove(HIDDEN_CLASSNAME);
-   greeting.innerText = `Hello, ${username}!`;
+   greeting.innerText = `Hello, ${username}`;
 }
 
 function onLoginSubmit(e){
