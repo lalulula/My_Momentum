@@ -5,6 +5,9 @@ const toDoList = document.getElementById("todo-list");
 let toDos = [];
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
+if(localStorage.getItem("username")){
+  toDoForm.classList.remove("hidden");
+}
 
 if(savedToDos){
   const parsedToDos = JSON.parse(savedToDos);
