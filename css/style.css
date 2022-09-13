@@ -1,12 +1,13 @@
-@font-face {
+/* @font-face {
   font-family: "San Francisco";
   font-weight: 400;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-}
+} */
 
 body{
   padding-top: 200px;
   overflow: hidden;
+  font-family: 'Alegreya Sans SC';
 }
 
 .hidden{
@@ -25,32 +26,39 @@ body{
   opacity: 0.33;
 }
 
+h2{
+  text-align: center;
+  font-size: 80px;
+  font-weight: lighter;
+  margin-top: 0px;
+  margin-bottom: 10px;
+
+}
+
 #login-form{
   text-align: center;
 }
 #login-form div{
-  font-size: 50px;
+  font-size: 20px;
   font-weight: bold;
 }
 #login-form input{
   border: none;
-  border-bottom: 5px white solid;
+  border-bottom: 3px white solid;
   background: none;
-  font-size: 30px;
+  font-size: 15px;
   text-align: center;
 }
 #login-form input:focus{
   outline: none;
 }
 
-h2{
-  text-align: center;
-}
 
 h1{
   margin-top: 0px;
   text-align: center;
   font-size: 50px;
+  font-weight: lighter;
 }
 
 #todo-form{
@@ -72,6 +80,12 @@ h1{
 
 #todo-list{
   padding-left: 0px;
+  height: 200px;
+  overflow: auto;
+}
+
+#todo-list::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
 #todo-list li{
   list-style: none;

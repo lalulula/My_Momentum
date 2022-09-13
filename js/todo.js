@@ -5,15 +5,16 @@ const toDoList = document.getElementById("todo-list");
 let toDos = [];
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
-if(localStorage.getItem("username")){
+if(savedUserName){
   toDoForm.classList.remove("hidden")
+  if(savedToDos){
+    toDoForm.classList.remove("hidden")
+    const parsedToDos = JSON.parse(savedToDos);
+    toDos = parsedToDos;
+    parsedToDos.forEach((e)=>paintToDo(e));
+  }
 }
 
-if(savedToDos){
-  const parsedToDos = JSON.parse(savedToDos);
-  toDos = parsedToDos;
-  parsedToDos.forEach((e)=>paintToDo(e));
-}
 
 function saveToDos(){
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));

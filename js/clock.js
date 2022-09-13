@@ -1,4 +1,11 @@
 const clock = document.getElementById("clock");
+// const savedUserName = localStorage.getItem("username");
+
+// if(savedUserName){
+//   clock.classList.remove("hidden");
+//   getClock();
+//   setInterval(getClock, 1000);
+// }
 
 function getClock(){
   const date = new Date();
