@@ -22,7 +22,7 @@ if(savedUserName === null){
 
 function paintGreetings(username){
    greeting.classList.remove(HIDDEN_CLASSNAME);
-   toDoForm.classList.remove("hidden");
+   toDo.classList.remove("hidden");
    greeting.innerText = `Hello, ${username}`;
 }
 
@@ -32,7 +32,7 @@ function onLoginSubmit(e){
    e.preventDefault();
    localStorage.setItem(USERNAME_KEY, username);
    loginForm.classList.add(HIDDEN_CLASSNAME);
-   toDoForm.classList.remove("hidden");
+   toDo.classList.remove("hidden");
    paintGreetings(username)
 }
 
